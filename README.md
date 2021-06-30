@@ -33,7 +33,7 @@ Register a free account on `https://ankiweb.net/account/register` if you dont ha
 ## Docker
 If you prefer using Docker instead of manually installing it.
 Copy the `Dockerfile.sample` and edit it.
-Rename it to `"Dockerfile"` and save it 
+Rename it to `"Dockerfile"` and save it.
 Near the bottom you have to provide API Credentials either using the `settings.json` file or setting the ENV variables.
 If you want to use Anki on the same PC as Docker use: `http://host.docker.internal:8765` for the `ANKICONNECTIP`, it will passthrough the api from localhost:8765.
 Refer to the settings section below for details on these.
