@@ -145,12 +145,21 @@ By default WitAI's free API is used for voice recognition / transcription. But y
 
 ### Resources and Repos used
 https://foosoft.net/projects/anki-connect/
+
 https://github.com/meda1028/DiscordEarsBot
+
 https://github.com/meda1028/anki
+
 https://github.com/meda1028/anki-sync-server
+
 https://github.com/meda1028/DiscordSpeechBot
+
 https://github.com/meda1028/Discord-TTS
+
 https://github.com/discordjs/discord.js/
+
 https://github.com/wit-ai/node-wit
+
 https://github.com/wit-ai/wit-api-only-tutorial
+
 https://github.com/discordjs/opus
