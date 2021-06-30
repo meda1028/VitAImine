@@ -143,7 +143,7 @@ By default WitAI's free API is used for voice recognition / transcription. But y
 6. Put the json file inside your bot directory and rename it to `gspeech_key.json`.
 
 
-### Resources and Repos used
+### Resources, Repos and Forks used
 https://foosoft.net/projects/anki-connect/
 
 https://github.com/meda1028/DiscordEarsBot
