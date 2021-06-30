@@ -2,14 +2,15 @@
 
 ## Docker
 If you prefer using Docker instead of manually installing it.
-Copy the `Dockerfile.sample` to `Dockerfile` and edit it.
+Copy the `Dockerfile` and edit it.
 Near the bottom you have to provide API Credentials either using the `settings.json` file or setting the ENV variables.
 Refer to the settings section below for details on these.
 Once you've configured the Dockerfile you can build and run it:
 
-1. run `docker build -t name .`  this may take a minute or two.
-2. run `docker run -it name`
-3. Proceed to Usage section below.
+1. run `docker build - < Dockerfile -t vitaimine`  this may take a minute or two.
+2. run `docker images` and doublecheck if theres a image called 'vitaimine'
+3. run `docker run vitaimine`
+4. Proceed to Usage section below.
 
 ## Installation
 You need nodeJS version 14+ with npm on your machine.
@@ -33,10 +34,12 @@ Rename the file `settings-sample.json` to `settings.json` and enter the obtained
 }
 ```
 
-If you are using Digitalocean Apps, Heroku or another service you can also use Environment Variables instead of a settings file. Configure these with the appropriate values:
+If you are using Digitalocean Apps, Heroku, Docker or another service you can also use Environment Variables instead of a settings file. 
+Configure these with the appropriate values:
 ```
 DISCORD_TOK
 WITAPIKEY
+ANKI
 ```
 
 ## Running
@@ -45,15 +48,16 @@ Execute the following in your shell or prompt:
 ```
 node index.js
 ```
+or
+```
+npm start
+```
 
-Use [PM2](https://www.npmjs.com/package/pm2) to keep the bot running 24/7, it will also restart the bot in case of a crash or on memory limits (2GB default):
-```
-pm2 start ecosystem.config.js
-```
+
 
 ## Usage
 
-By now you have a discord server, the DiscordEarsBot is running and is a part of your server. Make sure your server has a text and voice channel.
+By now you have a discord server, the VitAimine is running and is a part of your server. Make sure your server has a text and voice channel.
 
 1. Enter one of your voice channels.
 2. In one of your text channels type: `*join`, the bot will join the voice channel.
@@ -67,10 +71,12 @@ By now you have a discord server, the DiscordEarsBot is running and is a part of
 - Only when your user picture turns green in the voice channel will the bot receive your audio.
 - A long pause interrupts the audio input.
 - (WitAI only) The duration of a single audio input is limited to 20 seconds, longer audio is not transcribed.
+- There's also a Bug if you didn't let googleTTS finish its sentence it won't continue
+- Sadly the only 2 TTS Options are normal, and slow
 
 ## Language
 WitAI supports over 120 languages (https://wit.ai/faq), however only one language can be used at a time.
-If you're not speaking English on Discord, then change your default language on WitAI under "settings" for your app.
+If you're not speaking German on Discord, then change your default language on WitAI under "settings" for your app.
 
 You can also change the language using the following bot command:
 
@@ -87,7 +93,7 @@ The bot should reply with a success message.
 <code> should be an ISO 639-1 language code (2 digits):
 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 ```
-
+But keep in mind, each Wit.Ai token represents only 1 language.
 
 
 
