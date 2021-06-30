@@ -31,6 +31,7 @@
     "fs": "0.0.1-security",
     "google-tts-api": "^2.0.2",
     "node-witai-speech": "^1.0.2",
+    "request": "^2.88.2",
     "underscore": "^1.13.1",
     "xhr": "^2.6.0",
     "xmlhttprequest": "^1.8.0"
