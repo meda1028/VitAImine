@@ -1,0 +1,41 @@
+{
+  "name": "vitaimine",
+  "version": "1.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "Daniel Meyer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meda1028/DiscordEarsBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meda1028/DiscordEarsBot/issues"
+  },
+  "homepage": "https://github.com/meda1028/DiscordEarsBot#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@google-cloud/speech": "^4.5.0",
+    "@greencoast/logger": "^1.0.1",
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.1",
+    "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
+    "fs": "0.0.1-security",
+    "google-tts-api": "^2.0.2",
+    "node-witai-speech": "^1.0.2",
+    "underscore": "^1.13.1",
+    "xhr": "^2.6.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0"
+  }
+}
