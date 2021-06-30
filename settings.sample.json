@@ -1,0 +1,7 @@
+{
+    "discord_token": "YOURDISCORDTOKEN",
+    "spotify_token_id": "SPOTIFYTOKENID",
+    "spotify_token_secret": "SPOTIFYTOKENSECRET",
+    "wit_ai_token": "YOURWITAPIKEY",
+    "ankiconnect_api_ip": "http://host.docker.internal:8765"
+}
