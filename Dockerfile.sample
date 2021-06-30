@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-
+ARG DEBIAN_FRONTEND=noninteractive
 RUN mkdir /var/www/
 RUN mkdir /var/www/VitAImine
 WORKDIR /var/www/VitAImine
