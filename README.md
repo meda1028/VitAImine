@@ -1,20 +1,54 @@
 ## VITAIMINE
 
+
+
+## ANKI & ANKI-CONNECT
+To connect Anki with the bot, download ANKI from `https://apps.ankiweb.net/` and install it.
+Register a free account on `https://ankiweb.net/account/register` if you dont have one already.
+1.  Start Anki and Login (Sync).
+2.  Navigate [Tools]->[Add-ons]->[Get Add-ons...] and enter Code: `2055492159`
+    To download Anki-Connect https://ankiweb.net/shared/info/2055492159
+3.  Once Downloaded open [Tools]->[Add-ons]->[AnkiConnect] and replace with following configuration:
+    a.)if your Discord server is on another machine you neet to input you `external ip` instead of `localhost`
+       and Expose Port `8765` to make it accesible via internet
+       
+    b.) if you want to run Anki on the same Machine as your Discord Server e.g. with `Docker`
+```js
+{
+    "apiKey": null,
+    "apiLogPath": null,
+    "ignoreOriginList": [],
+    "webBindAddress": "localhost",
+    "webBindPort": 8765,
+    "webCorsOriginList": [
+        "http://localhost"
+    ]
+}
+```
+4. Press [ok] and restart Anki
+    
+
+    
+
 ## Docker
 If you prefer using Docker instead of manually installing it.
-Copy the `Dockerfile` and edit it.
+Copy the `Dockerfile.sample` and edit it.
+Rename it to `"Dockerfile"` and save it 
 Near the bottom you have to provide API Credentials either using the `settings.json` file or setting the ENV variables.
+If you want to use Anki on the same PC as Docker use: `http://host.docker.internal:8765` for the `ANKICONNECTIP`, it will passthrough the api from localhost:8765.
 Refer to the settings section below for details on these.
 Once you've configured the Dockerfile you can build and run it:
 
-1. run `docker build - < Dockerfile -t vitaimine`  this may take a minute or two.
-2. run `docker images` and doublecheck if theres a image called 'vitaimine'
-3. run `docker run vitaimine`
-4. Proceed to Usage section below.
+1.  run `docker build - < Dockerfile -t vitaimine`  this may take a minute or two.
+2.  run `docker images` and doublecheck if theres a image called 'vitaimine'
+3.  launch ANKI with ANKICONNECT on localhost:8765
+4.  run `docker run vitaimine`
+5.  Proceed to Usage section below.
 
 ## Installation
 You need nodeJS version 14+ with npm on your machine.
 Using shell or command prompt execute the following:
+
 ```
 git clone https://github.com/meda1028/name.git
 cd name
@@ -30,7 +64,8 @@ Rename the file `settings-sample.json` to `settings.json` and enter the obtained
 ```
 {
     "discord_token": "your_token",
-    "wit_ai_token": "your_token"
+    "wit_ai_token": "your_token",
+    "ankiconnect_api_ip": "http://host.docker.internal:8765"
 }
 ```
 
@@ -39,7 +74,7 @@ Configure these with the appropriate values:
 ```
 DISCORD_TOK
 WITAPIKEY
-ANKI
+ANKICONNECT_IP
 ```
 
 ## Running
@@ -52,7 +87,6 @@ or
 ```
 npm start
 ```
-
 
 
 ## Usage
