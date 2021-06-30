@@ -167,3 +167,7 @@ https://github.com/wit-ai/node-wit
 https://github.com/wit-ai/wit-api-only-tutorial
 
 https://github.com/discordjs/opus
+
+
+
+![Test Image 4](https://github.com/meda1028/VitAImine/blob/main/logo_small.png)
