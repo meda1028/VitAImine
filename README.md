@@ -152,6 +152,8 @@ https://github.com/meda1028/anki
 
 https://github.com/meda1028/anki-sync-server
 
+https://github.com/healzer/DiscordEarsBot
+
 https://github.com/meda1028/DiscordSpeechBot
 
 https://github.com/moonstar-x/discord-tts-bot
