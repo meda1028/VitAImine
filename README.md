@@ -1,6 +1,6 @@
 ## VITAIMINE
 
-
+![Test Image 4](https://github.com/meda1028/VitAImine/blob/main/logo_white_large.png)
 
 ## ANKI & ANKI-CONNECT
 To connect Anki with the bot, download ANKI from `https://apps.ankiweb.net/` and install it.
