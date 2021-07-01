@@ -522,7 +522,7 @@ function speak_impl(voice_Connection, mapKey) {
             try {
                 let new_buffer = await convert_audio(buffer)
                 let out = await transcribe(new_buffer);
-                const confidence = out.intents?.[0]?.confidence;
+                var confidence = out.intents?.[0]?.confidence;
                 let entities_exists = !_.isEmpty(out.entities);
                 if (confidence !== undefined) {
                     if (out.intents[0].confidence > 0.8){
