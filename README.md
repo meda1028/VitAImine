@@ -1,9 +1,9 @@
-## VITAIMINE
+## VitAImine
 
 ![Test Image 4](https://github.com/meda1028/VitAImine/blob/main/logo_small_icon_only.png)
 
-## ANKI & ANKI-CONNECT
-To connect Anki with the bot, download ANKI from `https://apps.ankiweb.net/` and install it.
+## Anki & Anki-Connect
+To connect Anki with the bot, download Anki from `https://apps.ankiweb.net/` and install it.
 Register a free account on `https://ankiweb.net/account/register` if you dont have one already.
 1.  Start Anki and Login (Sync).
 2.  Navigate [Tools]->[Add-ons]->[Get Add-ons...] and enter Code: `2055492159`
