@@ -24,6 +24,7 @@ RUN npm update
 ENV DISCORD_TOK="YOURDISCORDTOKEN"
 ENV WITAPIKEY="YOURWITAPIKEY"
 ENV ANKICONNECT_IP="http://host.docker.internal:8765"
+ENV TOGGLEGREETING=0
 
 
 CMD git pull && npm update && npm start
