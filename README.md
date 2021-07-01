@@ -32,6 +32,7 @@ Register a free account on `https://ankiweb.net/account/register` if you dont ha
 
 ## Docker
 If you prefer using Docker instead of manually installing it.
+Instead of a docker file you can also try to pull via `docker pull meda1028\vitaimine`
 Copy the `Dockerfile.sample` and edit it.
 Near the bottom you have to provide API Credentials either using the `settings.json` file or setting the ENV variables.
 Rename it to `"Dockerfile"` and save it.
