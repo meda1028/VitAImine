@@ -8,6 +8,7 @@ Register a free account on `https://ankiweb.net/account/register` if you dont ha
 1.  Start Anki and Login (Sync).
 2.  Navigate [Tools]->[Add-ons]->[Get Add-ons...] and enter Code: `2055492159`
     To download Anki-Connect https://ankiweb.net/shared/info/2055492159
+    (I recommend installing 1133851639 too, which gives an better Presence for the Anki Player https://github.com/Monacraft/AnkiDiscord)
 3.  Once Downloaded open [Tools]->[Add-ons]->[AnkiConnect] and replace with following configuration:
     a.)if your Discord server is on another machine you neet to input you `external ip` instead of `localhost`
        and Expose Port `8765` to make it accesible via internet
@@ -173,6 +174,7 @@ https://github.com/wit-ai/wit-api-only-tutorial
 
 https://github.com/discordjs/opus
 
+https://github.com/Monacraft/AnkiDiscord
 
 
 ![Test Image 4](https://github.com/meda1028/VitAImine/blob/main/logo_small.png)
