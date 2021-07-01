@@ -11,7 +11,7 @@ const logo = `
 ░╚████╔╝░██║░░░██║░░░██╔══██║██║██║╚██╔╝██║██║██║╚████║██╔══╝░░
 ░░╚██╔╝░░██║░░░██║░░░██║░░██║██║██║░╚═╝░██║██║██║░╚███║███████╗
 ░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚══════╝
-v.0.5
+v.0.6
                                                    
   `;
 //////////////////////////////////////////
@@ -41,7 +41,7 @@ const request = require("request");
 var _ = require('underscore');
 //using request here because node witai speech module needs it
 //const cleverbot = require("cleverbot-free");
-//const keepAlive = require('./server');
+const keepAlive = require('./server');
 
 
 logger.info('LIBRARIES LOADED');
@@ -188,7 +188,7 @@ function loadConfig() {
 loadConfig()
 logger.info('CONFIG LOADED');
 load_anki_API();
-//keepAlive();
+keepAlive();
 
 const https = require('https')
 
