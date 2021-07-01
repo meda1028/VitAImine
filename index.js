@@ -167,8 +167,6 @@ const SETTINGS_FILE = 'settings.json';
 
 let DISCORD_TOK = null;
 let WITAPIKEY = null;
-//let SPOTIFY_TOKEN_ID = null;
-//let SPOTIFY_TOKEN_SECRET = null;
 let ANKI_USER = null;
 
 function loadConfig() {
@@ -177,10 +175,12 @@ function loadConfig() {
         DISCORD_TOK = CFG_DATA.discord_token;
         WITAPIKEY = CFG_DATA.wit_ai_token;
         ANKICONNECT_IP = CFG_DATA.ankiconnect_api_ip;
+        TOGGLEGREETING = CFG_DATA.togglegreeting;
     } else {
         ANKICONNECT_IP = process.env.ANKICONNECT_IP;
         DISCORD_TOK = process.env.DISCORD_TOK;
         WITAPIKEY = process.env.WITAPIKEY;
+        TOGGLEGREETING = process.env.TOGGLEGREETING;
     }
     if (!DISCORD_TOK || !WITAPIKEY)
         throw 'failed loading config #113 missing keys!'
@@ -319,10 +319,11 @@ async function process_command(msg){
                 lastMsg = msg;
                 if (!guildMap.has(mapKey)) {
                     await connect(msg, mapKey)
-                    if (togglegreeting == 1) {
+                    if (togglegreeting < 3) {
                         msg.guild.ttsPlayer.say('Hallo, Ich bin Vitamin und ich kann dir helfen deine Karteikarten mit Anki zu lernen');
                         msg.guild.ttsPlayer.say('Um die Abfrage zu starten sage: "Quiz", Um einen Überblick der Funktionen zu erhalten sage: "Hilfe" ');
-                        togglegreeting == 0;
+                        togglegreeting += 1;
+                        process.env['TOGGLEGREETING'] = togglegreeting;
                     }
                     else{
                         let greetings = ['Hallo', 'Schön dich zu sehen', 'Willkommen zurück', 'Guten Tag', 'Servus']
